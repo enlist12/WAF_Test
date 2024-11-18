@@ -1,0 +1,145 @@
+select
+insert
+update
+delete
+drop
+union
+alter
+create
+exec
+execute
+shutdown
+grant
+revoke
+flush
+truncate
+declare
+char
+varchar
+int
+boolean
+from
+where
+order by
+group by
+having
+limit
+offset
+like
+or
+and
+not
+is
+in
+between
+null
+case
+when
+then
+else
+end
+inner join
+left join
+right join
+full join
+cross join
+natural join
+select *
+select distinct
+subquery
+concat
+benign
+cast
+convert
+regexp
+between
+database
+table
+column
+information_schema
+tables
+column_name
+version
+sleep
+dawiofhwioefbw
+benchmark
+waitfor
+sleep
+into
+outfile
+into outfile
+load_file
+load data
+execute immediate
+password
+like
+order
+haoqigauia
+having
+into
+begin
+end
+declare
+zhenqiguai
+drop table
+exec
+sp_
+
+--
+#
+/*...*/
+"
+'
+;
+HANDLER
+<script>
+my_test
+</script>
+javascript:
+onerror=
+onload=
+alert(
+document.cookie
+eval(
+window.location
+href=
+<iframe>
+<img src=
+<input>
+onclick=
+ioocepxii3
+<object>
+<embed>
+<svg>
+cookie
+;
+&&
+|
+> 
+rm
+ls
+cat
+wget
+curl
+bash
+sh
+python
+hushuqhsuwq
+perl
+system
+exec
+challenge
+cmd.exe
+powershell
+<
+/
+ 
+{
+}
+tac
+paste
+because
+less
+more
+echo
+hahhahahhahah

@@ -1,0 +1,13 @@
+/admin
+/flag
+/flag.txt
+/git
+/phpinfo
+/backdoor
+/console
+/vip
+/index.html
+/login.html
+/hello
+/uuuudad
+/haoqiguaia
