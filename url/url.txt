@@ -11,3 +11,10 @@
 /hello
 /uuuudad
 /haoqiguaia
+/flag.html
+/admin.html
+/vips
+/www.zip
+/admin.txt
+/source
+/source.txt
