@@ -1,5 +1,4 @@
 import random
-from random import *
 from time import *
 import requests
 def get_random_ip():
@@ -7,7 +6,7 @@ def get_random_ip():
     get random_ip
     :return: ipv4(str)
     '''
-    return '.'.join(str(randint(0, 255)) for _ in range(4))
+    return '.'.join(str(random.randint(0, 255)) for _ in range(4))
 
 forbidden=0
 Not_found=0
