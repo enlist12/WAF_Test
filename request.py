@@ -17,7 +17,7 @@ For nginx,we have no idea to make fake ip.So random_ip is for X-Forwarded-For
 '''
 parser.add_argument("-i","--ips",action="store_true",help="Turn on random ip")
 parser.add_argument("-u","--ua",action="store_true",help="Turn on normal UA")
-parser.add_argument('-t','--time',help="sleep time each request",default=0.1)
+parser.add_argument('-t','--time',type=float,help="sleep time each request",default=0.1)
 
 args=parser.parse_args()
 
@@ -37,9 +37,9 @@ if mod not in ['keyword','url']:
 
 
 if args.file:
-    filename=args.text
+    filename=args.file
 else:
-    filename=get_filename(args.file)
+    filename=get_filename(mod)
 
 
 '''
@@ -55,9 +55,9 @@ data = [line.strip() for line in data]
 
 
 if mod=='keyword':
-    test_keyword(data=data,sleep_time=tm,times=num,url=host,is_ua=args.ua,is_rand_ip=args.ips)
+    test_keyword(data=data,sleep_time=tm,times=num,host=host,is_ua=args.ua,is_rand_ip=args.ips)
 elif mod=='url':
-    test_url(data=data,sleep_time=tm,times=num,url=host,is_ua=args.ua,is_rand_ip=args.ips)
+    test_url(data=data,sleep_time=tm,times=num,host=host,is_ua=args.ua,is_rand_ip=args.ips)
 
 
 

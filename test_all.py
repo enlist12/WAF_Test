@@ -1,3 +1,4 @@
+import random
 from random import *
 from time import *
 import requests
@@ -36,41 +37,42 @@ def ending(num):
     global forbidden,abnormal,Not_found
     print(str)
     ss=f"Sum:{num}".ljust(15,' ')+f"forbid:{forbidden}".ljust(15,' ')+f'normal:{abnormal}'.ljust(15)+f'Not_found:{Not_found}'.ljust(16)
+    print(ss)
 
-def test_keyword(is_ua,is_rand_ip,data,sleep_time,times,url):
+def test_keyword(is_ua,is_rand_ip,data,sleep_time,times,host):
     headers:dict={}
     if is_ua==True:
         headers['User-Agent']="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0"
     for i in range(times):
         if is_rand_ip == True:
             headers['X-Forwarded-For'] = get_random_ip()
-        value = data[randint(0, len(data) - 1)]
-        url = url + f"?id={value}"
+        value = random.choice(data)
+        url = host + f"?id={value}"
         response = requests.get(url=url, headers=headers)
         code = response.status_code
         collect(code)
-        print_res(url,code,40)
+        print_res(url,code,60)
         '''
         To release the pressure of nginx
         '''
         sleep(sleep_time)
     ending(times)
 
-def test_url(is_ua,is_rand_ip,data,sleep_time,times,url):
+def test_url(is_ua,is_rand_ip,data,sleep_time,times,host):
     headers:dict={}
     if is_ua==True:
         headers['User-Agent']="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0"
     for i in range(times):
         if is_rand_ip == True:
             headers['X-Forwarded-For'] = get_random_ip()
-        value = data[randint(0, len(data) - 1)]
-        url = url + value
+        value = random.choice(data)
+        url = host + value
         response = requests.get(url=url, headers=headers)
         code = response.status_code
         collect(code)
-        print_res(url,code,40)
+        print_res(url,code,60)
         '''
         To release the pressure of nginx
         '''
         sleep(sleep_time)
-        ending(times)
+    ending(times)
